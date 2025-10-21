@@ -44,7 +44,7 @@ public class CameraActivity extends AppCompatActivity {
         previewView = findViewById(R.id.previewView);
         txtDetected = findViewById(R.id.txtDetectedObject);
 
-        detector = new ObjectDetectorML();
+        detector = new ObjectDetectorML(this);
         cameraExecutor = Executors.newSingleThreadExecutor();
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
